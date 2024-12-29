@@ -122,6 +122,6 @@ jobs:
         
       - name: Upload package
         if: runner.os != 'macOS'
-        run: gh release upload "${{ needs.create-nightly-release.outputs.tag_name }}" "${{ env.PACKAGE_FILE }}"
+        run: gh release upload "${{ needs.create-nightly-debug-release.outputs.tag_name }}" "${{ env.PACKAGE_FILE }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
