@@ -13,7 +13,7 @@ jobs:
       date: ${{ steps.current_time_underscores.outputs.formattedTime }}
       upload_url: ${{ steps.create_release.outputs.upload_url }}
       package_prefix: ruffle-nightly-${{ steps.current_time_underscores.outputs.formattedTime }}
-      tag_name: nightly-${{ steps.current_time_dashes.outputs.formattedTime }}
+      tag_name: nightly-debug-${{ steps.current_time_dashes.outputs.formattedTime }}
 
     # Only run the scheduled workflows on the main repo.
     if: github.repository == 'ruffle-rs/ruffle' || github.event_name == 'repository_dispatch' || github.event_name == 'workflow_dispatch'
