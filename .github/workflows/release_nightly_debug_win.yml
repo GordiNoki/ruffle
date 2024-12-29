@@ -72,7 +72,7 @@ jobs:
             MSI_ARCH: x64
 
     env:
-      PACKAGE_FILE: ${{ needs.create-nightly-release.outputs.package_prefix }}-${{ matrix.build_name }}.${{ startsWith(matrix.build_name, 'win') && 'zip' || 'tar.gz' }}
+      PACKAGE_FILE: ${{ needs.create-nightly-debug-release.outputs.package_prefix }}-${{ matrix.build_name }}.${{ startsWith(matrix.build_name, 'win') && 'zip' || 'tar.gz' }}
       CARGO_BUILD_DIR: target/${{ matrix.target }}/release
 
     runs-on: ${{ matrix.os }}
